@@ -42,6 +42,7 @@ $(".card").on("click",function(){
         firstCardId = "";
         secondCardId = "";
         $("#combi-name").html('');
+        $("#combi-name").css('backgroundColor','#faebd7');
 
         // 1枚目
         const index1 = $(".card").index($(this));
@@ -161,6 +162,8 @@ function checkCombi() {
         setTimeout(matchCombi2, 500);
     } else {
         $("#combi-name").html('合致してません');
+        $("#combi-name").css('color','#ffffff');
+        $("#combi-name").css('backgroundColor','#666666');
         setTimeout(unmatchCombi, 600);
         console.log(matchCount,"マッチ数");
     }
@@ -168,6 +171,13 @@ function checkCombi() {
 
 // マッチしたときの動作
 function matchCombi1(){
+    $("#combi-name").css('color','#ffffff');
+    $("#combi-name").css('backgroundColor','#e94609');
+
+    // 音声（WELL DONEと合わせる）
+    const audio = new Audio('audio/match.mp3');
+    audio.play();
+
     matchCount += 1; //全体のマッチ数
     console.log(matchCount,"マッチ数");
 
@@ -187,8 +197,14 @@ function matchCombi2() {
     // 9組全部マッチしたときのメッセージ
     if(matchCount === 9){
         $("#combi-name").html('WELL DONE!');
+        $("#combi-name").css('color','#222222');
+        $("#combi-name").css('backgroundImage','linear-gradient(135deg, #b8751e 0%, #ffce08 37%, #fefeb2 47%, #fafad6 50%, #fefeb2 53%, #e1ce08 63%, #b8751e 100%)');
+    
+        // 音声（WELL DONEと合わせる）
+        const audio = new Audio('audio/cheer.mp3');
+        audio.play();
+    
     }
-
 }
 
 // マッチしなかったときの動作
@@ -200,7 +216,6 @@ function unmatchCombi() {
     $("#"+firstCardId).addClass('back');
     $("#"+secondCardId).removeClass('front');
     $("#"+secondCardId).addClass('back');
-    $("#combi-name").html('');
 }
 
 

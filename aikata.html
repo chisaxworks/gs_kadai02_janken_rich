@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Responsive -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,viewport-fit=cover">
+
+    <title>相方マッチングゲーム</title>
+    <link rel="stylesheet" href="css/reset2.css">
+    <link rel="stylesheet" href="css/style_aikata.css">
+
+    <!-- googleフォント -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Satisfy&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon.ico">
+
+</head>
+
+<body>
+
+    <header>
+        <h1>相方マッチングゲーム</h1>
+    </header>
+
+    <main>
+        <div id="game-area">
+            <!-- ボタン -->
+            <div class="btn-wrap">
+                <button id="start-btn">CLICK!!</button>
+                <button id="reset-btn">RESET</button>
+            </div>
+            <!-- コンビ名 -->
+            <div class="result-wrap">
+                <p id="combi-name"></p>
+            </div>
+            <!-- 個人 -->
+            <div class="name-wrap">
+                <!-- ボケチーム -->
+                <div class="boke">
+                    <div class="bubble">
+                        <p id="boke-words"></p>
+                        <div class="triangle"></div>
+                    </div>
+                    <div id="boke-name"></div>
+                </div>
+                <!-- ツッコミチーム -->
+                <div class="tukkomi">
+                    <div class="bubble">
+                        <p id="tukkomi-words"></p>
+                        <div class="triangle"></div>
+                    </div>
+                    <div id="tukkomi-name"></div>
+                </div>
+            </div>
+            <!-- 観客 -->
+            <div id="audience">
+                <img src="img/audience02.png" alt="">
+            </div>  
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2024 Chisa Game Center
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <script src="js/script_aikata.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Responsive -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,viewport-fit=cover">
+
+    <title>じゃんけん</title>
+    <link rel="stylesheet" href="css/reset2.css">
+    <link rel="stylesheet" href="css/style_janken.css">
+
+    <!-- googleフォント -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Satisfy&family=DotGothic16&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon.ico">
+</head>
+
+<body>
+
+    <header>
+        <h1>じゃんけんゲーム</h1>
+    </header>
+
+    <main>
+        <div class="main_inner">
+            <div class="result_wrap">
+                <div id="result"></div>
+            </div>
+            <div class="hand_wrap">
+                <div class="user_hand_wrap">
+                    <p class="hand-title">あなたの手</p>
+                    <div id="user_hand"></div>
+                </div>
+                <div class="pc_hand_wrap">
+                    <p class="hand-title">コンピューターの手</p>
+                    <div id="pc_hand"></div>
+                </div>
+            </div>
+            <div class="choose_hand_wrap">
+                <p>手を選んでください</p>
+                <ul class="choose_user_hand">
+                    <li id="gu_btn">グー</li>
+                    <li id="cho_btn">チョキ</li>
+                    <li id="par_btn">パー</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2024 Chisa Game Center
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/script_janken.js"></script>
+
+</body>
+</html>

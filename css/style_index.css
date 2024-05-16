@@ -1,0 +1,165 @@
+body {
+    font-family: "DotGothic16", "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    background-color: #ffffff;
+    color: #222222;
+}
+
+header {
+    height: 100px;
+    display: flex;
+    column-gap: 30px;
+    align-items: center;
+    justify-content: center;
+    background-color: #30ADD1;
+    color: #ffffff;
+}
+
+header img {
+    width: 50px;
+    padding-top: 10px;
+}
+
+h1 {
+    font-size: 40px;
+    text-align: center;
+    animation: flash 2s ease-in-out;
+}
+
+/* 点滅 */
+@keyframes flash {
+    0%,100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+}
+
+.main-inner {
+    max-width: 1200px;
+    margin: 0px auto;
+    padding: 0px 25px;
+    height: calc(100vh - 200px);
+}
+
+.information {
+    font-size: 18px;
+    text-align: center;
+    padding: 70px 0;
+    color: #30ADD1;
+}
+
+/* タイピング風 */
+.information span {
+	display: none;
+}
+
+/*文字列後ろの線の設定*/
+.information::after {
+ 	content: "|";
+	animation: typinganime 1.5s linear infinite;
+}
+
+@keyframes typinganime{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.game-item-wrap {
+    display: flex;
+    justify-content: center;
+    column-gap: 100px;
+}
+
+.en-title {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #F7C646;
+}
+
+.title-btn {
+    font-size: 24px;
+    border-radius: 5px;
+    color: #ffffff;
+    background-color: #F7C646;
+    text-align: center;
+    width: 300px;
+    height: 150px;
+    line-height: 150px;
+}
+
+.title-btn:hover {
+    background-color: #DA1773;
+}
+
+.new {
+    position: relative;
+}
+
+.new::after {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    content: "";
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/newicon.png);
+    background-size: contain;
+}
+
+footer {
+    font-size: 12px;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    background-color: #30ADD1;
+    color: #ffffff;
+    margin-top: 50px;
+}
+
+/* --------------------
+    for SP size 
+-------------------- */
+@media screen and (max-width: 768px){
+
+    header {
+        column-gap: 15px;
+        padding: 0px 25px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .main-inner {
+        height: auto;
+    }
+
+    .information {
+        padding: 40px 0;
+    }
+
+    .game-item-wrap {
+        flex-direction: column;
+        row-gap: 40px;
+    }
+
+    .en-title {
+        margin-bottom: 15px;
+    }
+    
+
+    .title-btn {
+        width: 100%;
+        height: 120px;
+        line-height: 120px;
+    }
+
+}

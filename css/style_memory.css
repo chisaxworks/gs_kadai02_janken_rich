@@ -1,0 +1,153 @@
+body {
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    background-color: #ffffff;
+    color: #222222;
+}
+
+/* ヘッダー */
+header {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #171717;
+    color: #ffffff;
+    position: relative;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+main {
+    background-color: #faebd7;
+}
+
+#game-area {
+    max-width: 1200px;
+    margin: 0px auto;
+    padding: 20px 25px 0;
+    height: calc(100vh - 80px);
+    position: relative;
+}
+
+/* 流れるテキスト */
+.infobar {
+    /* background-color: #ffffff; */
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.infotext {
+    animation: infobar 15s linear forwards;
+}
+
+@keyframes infobar {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* ボタン */
+.btn-wrap {
+    position: absolute;
+    top: 140px;
+    left: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn {
+    background-color: #13c196;
+    color: #ffffff;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    margin-bottom: 30px;
+
+    border-top: 4px solid #48ecc4;
+    border-right: 4px solid #0a5f4a;
+    border-bottom: 4px solid #0f745b;
+    border-left: 4px solid #8cf9de;
+}
+
+.btn:hover {
+    background-color: #11a37f;
+}
+
+.btn:active {
+    border-top: 4px solid #0f745b;
+    border-right: 4px solid #8cf9de;
+    border-bottom: 4px solid #48ecc4;
+    border-left: 4px solid #0a5f4a;
+}
+
+/* 情報エリア */
+.info-wrap {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    margin: 0 auto 20px;
+    display: flex;
+    column-gap: 50px;
+    justify-content: center;
+}
+
+#timer {
+    width: 240px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+#combi-name {
+    width: 240px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+/* カード部分 */
+.card-wrap {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 740px;
+    margin: 0 auto;
+}
+
+.card {
+    width: 120px;
+    height: 160px;
+    border: 1px solid gray;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+}
+
+.disabled{
+    opacity: 0.2;
+    transition: 0.2s;
+}
+
+/* フッター */
+footer {
+    font-size: 12px;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    background-color: #171717;
+    color: #ffffff;
+}

@@ -65,7 +65,7 @@ main {
     flex-direction: column;
 }
 
-.btn {
+#reset-btn {
     background-color: #13c196;
     color: #ffffff;
     width: 100px;
@@ -79,15 +79,24 @@ main {
     border-left: 4px solid #8cf9de;
 }
 
-.btn:hover {
+#reset-btn:hover {
     background-color: #11a37f;
 }
 
-.btn:active {
+#reset-btn:active {
     border-top: 4px solid #0f745b;
     border-right: 4px solid #8cf9de;
     border-bottom: 4px solid #48ecc4;
     border-left: 4px solid #0a5f4a;
+}
+
+#stop-btn {
+    color: #ffffff;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    margin-bottom: 30px;
+    border: 1px solid #ffffff;
 }
 
 /* 情報エリア */

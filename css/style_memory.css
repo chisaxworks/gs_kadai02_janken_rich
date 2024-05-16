@@ -140,6 +140,10 @@ main {
     height: 160px;
     border: 1px solid gray;
     cursor: pointer;
+    background-image: url(../img/yoshimoto.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .card img {

@@ -24,7 +24,6 @@ let firstCardId = "";
 let secondCardId = "";
 let startCard = 0;
 let matchCount = 0;
-let matchFlag = 0;
 
 // タイマー用
 let setTimeoutId = undefined;
@@ -42,8 +41,7 @@ $(".card").on("click",function(){
         // 2周目以降のための初期化
         firstCardId = "";
         secondCardId = "";
-        matchFlag = 0;
-        $("#combi-name").html(''); //コンビ名を空白にする
+        $("#combi-name").html('');
 
         // 1枚目
         const index1 = $(".card").index($(this));
@@ -61,9 +59,7 @@ $(".card").on("click",function(){
         $(this).removeClass('back');
         $(this).addClass('front');
 
-        firstCard = arr[index1];
-        // firstCard = "kuruma";
-        
+        firstCard = arr[index1];        
         cardImg =`<img src="img/${firstCard}.jpeg" alt="表"></img>`;
         $(this).html(cardImg);
 
@@ -85,8 +81,6 @@ $(".card").on("click",function(){
         $(this).addClass('front');
 
         secondCard = arr[index2];
-        // secondCard = "kemuri";
-
         cardImg =`<img src="img/${secondCard}.jpeg" alt="表"></img>`;
         $(this).html(cardImg);
 
@@ -174,7 +168,6 @@ function checkCombi() {
 
 // マッチしたときの動作
 function matchCombi1(){
-    matchFlag = 1; //今回のマッチ有無
     matchCount += 1; //全体のマッチ数
     console.log(matchCount,"マッチ数");
 

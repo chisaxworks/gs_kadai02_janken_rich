@@ -161,7 +161,7 @@ function checkCombi() {
         setTimeout(matchCombi2, 500);
     } else {
         $("#combi-name").html('合致してません');
-        setTimeout(unmatchCombi, 1000);
+        setTimeout(unmatchCombi, 600);
         console.log(matchCount,"マッチ数");
     }
 }

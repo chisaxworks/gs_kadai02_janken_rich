@@ -1,8 +1,3 @@
-// リセット
-$("#reset-btn").on("click",function(){
-    location.reload();  // ページを再読み込み
-});
-
 // 配列の作成
 let arr = ["domae","usagi","nagami","hamada","kuruma","kemuri","sakamoto","nakatani","urai","hirai","takeuchi","masumi","oda","ueda","niiyama","ishii","hayashi","mouri"];
 let num = arr.length;
@@ -46,7 +41,6 @@ $(".card").on("click",function(){
 
         // 1枚目
         const index1 = $(".card").index($(this));
-        console.log(index1,"どこがクリックされたか");
 
         count = 1;
 
@@ -68,13 +62,8 @@ $(".card").on("click",function(){
 
     } else if(count === 1){
 
-        // 2枚目事前確認
-        console.log(firstCardId,"firstCardID格納2枚目前確認");
-
         // 2枚目
         const index2 = $(".card").index($(this));
-        console.log(index2,"どこがクリックされたか");
-        console.log(firstCardId,"格納されているか");
 
         count = 0; //初期化のため0
 
@@ -89,7 +78,6 @@ $(".card").on("click",function(){
 
         // 判定
         checkCombi();
-        console.log(matchCount,"マッチ数");
 
     } else {
         return;
@@ -179,7 +167,6 @@ function matchCombi1(){
     audio.play();
 
     matchCount += 1; //全体のマッチ数
-    console.log(matchCount,"マッチ数");
 
     // 9組全部マッチしたらタイマーストップ
     if(matchCount === 9){
@@ -191,8 +178,6 @@ function matchCombi2() {
     // 合致したときの不透明度効果（時差）
     $("#"+firstCardId).addClass('disabled');
     $("#"+secondCardId).addClass('disabled');
-    console.log(firstCardId,"firstCardID格納確認2");
-    console.log(secondCardId,"secondCardID格納確認2");
 
     // 9組全部マッチしたときのメッセージ
     if(matchCount === 9){

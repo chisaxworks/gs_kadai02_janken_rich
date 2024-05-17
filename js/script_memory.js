@@ -10,9 +10,17 @@ for(let i = num; 1 < i; i--){
     [arr[r],arr[i-1]] = [arr[i-1],arr[r]];
 }
 
+//重さ解消のため一旦背景に全ての画像を読み込む
+for(let i = 0; i < 10; i++){
+    $("#card0"+[i+1]).css('backgroundImage','url(img/'+arr[i]+'.jpeg)');
+}
+
+for(let i = 9; i < num; i++){
+    $("#card"+[i+1]).css('backgroundImage','url(img/'+arr[i]+'.jpeg)');
+}
+
 // 変数宣言（グローバル）
 let count = 0;
-let cardImg = "";
 let firstCard = "";
 let secondCard = "";
 let firstCardId = "";
@@ -53,11 +61,10 @@ $(".card").on("click",function(){
 
         $(this).removeClass('back');
         $(this).addClass('front');
+        //裏面画像imgを消す処理↓
+        $(this).empty();
 
         firstCard = arr[index1];        
-        cardImg =`<img src="img/${firstCard}.jpeg" alt="表"></img>`;
-        $(this).html(cardImg);
-
         firstCardId = $(this).attr("id");
 
     } else if(count === 1){
@@ -69,11 +76,10 @@ $(".card").on("click",function(){
 
         $(this).removeClass('back');
         $(this).addClass('front');
+        //裏面画像imgを消す処理↓
+        $(this).empty();
 
         secondCard = arr[index2];
-        cardImg =`<img src="img/${secondCard}.jpeg" alt="表"></img>`;
-        $(this).html(cardImg);
-
         secondCardId = $(this).attr("id");
 
         // 判定
@@ -153,7 +159,6 @@ function checkCombi() {
         $("#combi-name").css('color','#ffffff');
         $("#combi-name").css('backgroundColor','#666666');
         setTimeout(unmatchCombi, 600);
-        console.log(matchCount,"マッチ数");
     }
 }
 
